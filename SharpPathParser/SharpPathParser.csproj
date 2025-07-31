@@ -43,6 +43,8 @@
         <Description>A port of omigutin's file_path_parser to C#.</Description>
         <PackageTags>library</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/lndrysrvcs/SharpPathParser/</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -51,6 +53,7 @@
 
     <ItemGroup>
         <None Include="..\README.md" pack="true" PackagePath="." />
+        <None Include="icon.png" Pack="true" PackagePath=""/>
     </ItemGroup>
 
 </Project>
