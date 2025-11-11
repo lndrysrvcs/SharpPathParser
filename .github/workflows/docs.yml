@@ -10,6 +10,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - uses: sator-imaging/docfx-pages@v1
         id: deployment   # required to show url in actions result page.
         with:
