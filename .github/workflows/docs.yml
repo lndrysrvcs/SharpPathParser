@@ -1,0 +1,19 @@
+name: Build docs
+on:
+  push:
+    branches:
+      - 'main'       # Run the workflow when pushing to the main branch
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sator-imaging/docfx-pages@v1
+        id: deployment   # required to show url in actions result page.
+        with:
+      # required parameters
+          app_name:    'SharpPathParser'
+          site_title:  'SharpPathParser docs'
+          site_footer: 'Copyright &copy SharpPathParser contributors'
